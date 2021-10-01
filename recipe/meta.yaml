@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-python-wheel/archive/{{ version }}.tar.gz
-  sha256: 5693a90177fbe3c51e4ccb2baea256a4fb8d6fbd2fe757da298dd933bbcdda9c
+  sha256: 49444dcc77e26db3aaf221aac9eabb0d52830cac8543cd2aff7dfa09e98909ac
 
 build:
   number: 0
