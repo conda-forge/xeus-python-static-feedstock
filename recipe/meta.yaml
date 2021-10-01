@@ -39,9 +39,11 @@ requirements:
     - xeus-python =0.0.0
 
 test:
-  imports:
-    - xpython
+  # imports:
+  #   - xpython
   commands:
+    - ldd ${PREFIX}/lib/python3.8/site-packages/xpython/xpython_extension.cpython-38-x86_64-linux-gnu.so
+    - readelf -d ${PREFIX}/lib/python3.8/site-packages/xpython/xpython_extension.cpython-38-x86_64-linux-gnu.so
     - test -f ${PREFIX}/share/jupyter/kernels/xpython/kernel.json                      # [unix]
     - if not exist %PREFIX%\\share\\jupyter\\kernels\\xpython\\kernel.json (exit 1)    # [win]
     - if exist %PREFIX%\\bin\\concrt140.dll (exit 1)                                   # [win]
