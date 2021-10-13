@@ -8,6 +8,9 @@ package:
 source:
   url: https://github.com/jupyter-xeus/xeus-python-wheel/archive/{{ version }}.tar.gz
   sha256: 49444dcc77e26db3aaf221aac9eabb0d52830cac8543cd2aff7dfa09e98909ac
+  patches:
+    # Patch OpenSSL for MacOS
+    - dbfca648ddaf6aa5f1ebac76547b15db82f7c506.patch
 
 build:
   number: 0
