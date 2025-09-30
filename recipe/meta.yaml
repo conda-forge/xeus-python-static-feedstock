@@ -1,5 +1,5 @@
 {% set name = "xeus-python-static" %}
-{% set version = "0.15.8" %}
+{% set version = "0.15.12.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-python-wheel/archive/{{ version }}.tar.gz
-  sha256: 25e973a2eef27ed81bdbd0b91dc56c36e57c22e94f34c27d655f40adcaf63630
+  sha256: 4363c27cb30e8fd3013b070b8ad547075aa5b551d2a811992be3681a6b23938c
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cmake
     - make                                   # [unix]
   host:
